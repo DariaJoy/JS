@@ -120,16 +120,12 @@ function mathOperation(arg1, arg2, operation) {
     switch (operation) {
         case '+':
             return addition;
-            break;
         case '-':
             return subtraction;
-            break;
         case '/':
             return division;
-            break;
         case '*':
             return multiplication;
-            break;
     }
 }
 mathOperation()
