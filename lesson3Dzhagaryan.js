@@ -40,7 +40,7 @@ let priceTwo = +prompt('Введите количество для второг�
 
 let customBasket = [
     ['Куртка "Adidas"', 1000, priceOne],   
-    ['Кеды "Convers"', 2700, priceTwo],
+    ['Кеды "Converse"', 2700, priceTwo],
 ]
 
 function totalPrice(customBasket) {
