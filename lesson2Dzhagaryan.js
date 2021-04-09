@@ -36,52 +36,52 @@ if (a > 0 && b > 0) {
 
 /* Задание 4. */
 
-var a1 = +prompt('Введите число от 1 до 15');
+let a1 = +prompt('Введите число от 1 до 15');
 switch (a1) {
     case 1:
-        alert('1');
+        console.log('1');
         
     case 2:
-        alert('2');
+        console.log('2');
         
     case 3:
-        alert('3');
+        console.log('3');
         
     case 4:
-        alert('4');
+        console.log('4');
         
     case 5:
-        alert('5');
+        console.log('5');
         
     case 6:
-        alert('6');
+        console.log('6');
         
     case 7:
-        alert('7');
+        console.log('7');
         
     case 8:
-        alert('8');
+        console.log('8');
         
     case 9:
-        alert('9');
+        console.log('9');
         
     case 10:
-        alert('10');
+        console.log('10');
         
     case 11:
-        alert('11');
+        console.log('11');
         
     case 12:
-        alert('12');
+        console.log('12');
         
     case 13:
-        alert('13');
+        console.log('13');
         
     case 14:
-        alert('14');
+        console.log('14');
         
     case 15:
-        alert('15');
+        console.log('15');
         break;
 
     default:
@@ -89,10 +89,11 @@ switch (a1) {
         break;
 }
 
+
 /* Задание 5. */
 
-let a = Math.floor(Math.random() * 100);
-let b = Math.floor(Math.random() * 100);
+let a = +prompt('Ведите первое число ');
+let b = +prompt('Ведите второе число ');
 
 function addition(a, b) {
     return a + b;
@@ -107,32 +108,29 @@ function division(a, b) {
 }
 
 function multiplication(a, b) {
-    return a + b;
+    return a * b;
 }
 
 /* Задание 6. */
 
-let arg1= +prompt('Ведите первое число ')
-let arg2= +prompt('Ведите второе число ')
-let operation = prompt('Ведите арифметический символ ')
-
 function mathOperation(arg1, arg2, operation) {
     switch (operation) {
-        case '+':
-            return addition;
-            break;
-        case '-':
-            return subtraction;
-            break;
-        case '/':
-            return division;
-            break;
-        case '*':
-            return multiplication;
-            break;
+        case addition:
+            return arg1 + arg2;
+        case subtraction:
+            return arg1 - arg2;
+        case division:
+            return arg1 / arg2;
+        case multiplication:
+            return arg1 * arg2;
     }
 }
-mathOperation()
+
+alert(mathOperation(a, b, addition));
+alert(mathOperation(a, b, subtraction));
+alert(mathOperation(a, b, division));
+alert(mathOperation(a, b, multiplication));
+
 /* Задание 7. */
 
 null > 0; // false
@@ -142,8 +140,9 @@ null >= 0; // true
 /* Столь протеворечивые результаты сравнения null и 0 объясняется особенностяи языка JS, когда значения провереяются путем абстрактного алгоритма сравнения для отношений. */
 
 /* Задание 8. */
-let val = +prompt('Введите число');
-let pow = +prompt('Введите степень числа');
+
+let c = +prompt('Введите число');
+let d = +prompt('Введите степень числа');
 
 function power(val, pow) {
     if (val === 0) {
@@ -161,4 +160,4 @@ function power(val, pow) {
     }
 }
 
-power();
+alert(power(c,d));
