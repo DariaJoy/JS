@@ -47,3 +47,4 @@ const customBasket = {
 };
 
 console.log(customBasket.countBasketPrice());
+
