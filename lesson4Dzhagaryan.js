@@ -31,12 +31,24 @@ const customBasket = {
             itemId: 11110,
             itemName: 'Куртка "Adidas"',
             itemPrice: 6999,
+<<<<<<< HEAD
             itemQuantity: 1,
+=======
+            itemQuantity: 10,
+            getRightPriceOne(){
+                if (priceOne >  allItems.itemQuantity){
+                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity + 'шт.');
+                } else {
+                    allItems.itemQuantity = priceOne;
+                }
+            },
+>>>>>>> JS4LESSON
         }, 
         {
             itemId: 11111,
             itemName: 'Кеды "Converse"',
             itemPrice: 7999,
+<<<<<<< HEAD
             itemQuantity: 2,
     }
     ],
@@ -47,3 +59,22 @@ const customBasket = {
 };
 
 console.log(customBasket.countBasketPrice());
+=======
+            itemQuantity: 10,
+            getRightPriceTwo(){
+                if (priceTwo >  allItems.itemQuantity){
+                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity);
+                } else {
+                    allItems.itemQuantity = priceTwo;
+            }
+        }  
+    }
+    ],
+    totalPrice() {
+        return this.allItems.reduce((prices, quantity) => 
+            price += prices.itemPrice * quantity.itemQuantity, 0);
+    },
+};
+
+alert('Стоимость Вашей покупки: ' + totalPrice(customBasket) + 'руб.');
+>>>>>>> JS4LESSON
