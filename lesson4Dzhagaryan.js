@@ -25,43 +25,25 @@ getObjRequest (request);
 
 /* Задание 2. */
 
-let priceOne = +prompt('Введите количество для первого товара: ');
-
-let priceTwo = +prompt('Введите количество для второго товара: ');
-
 const customBasket = {
     allItems: [
         {
             itemId: 11110,
             itemName: 'Куртка "Adidas"',
             itemPrice: 6999,
-            itemQuantity: 10,
-            getRightPriceOne(){
-                if (priceOne >  allItems.itemQuantity){
-                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity + 'шт.');
-                } else {
-                    allItems.itemQuantity = priceOne;
-                }
-            },
+            itemQuantity: 1,
         }, 
         {
             itemId: 11111,
             itemName: 'Кеды "Converse"',
             itemPrice: 7999,
-            itemQuantity: 10,
-            getRightPriceTwo(){
-                if (priceTwo >  allItems.itemQuantity){
-                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity);
-                } else {
-                    allItems.itemQuantity = priceTwo;
-            }
-        }  
+            itemQuantity: 2,
     }
     ],
-    totalPrice() {
-        return this.allItems.reduce((prices, quantity) => 
-            price += prices.itemPrice * quantity.itemQuantity, 0);
+    countBasketPrice() {
+        return this.allItems.reduce((totalPrice, cartItem) => 
+        totalPrice + cartItem.itemPrice * cartItem.itemQuantity, 0);
     },
 };
 
-alert('Стоимость Вашей покупки: ' + totalPrice(customBasket) + 'руб.');
+console.log(customBasket.countBasketPrice());
