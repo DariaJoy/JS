@@ -36,36 +36,32 @@ const customBasket = {
             itemName: 'Куртка "Adidas"',
             itemPrice: 6999,
             itemQuantity: 10,
-            itemQuantityRequest: getRightPriceOne,
+            getRightPriceOne(){
+                if (priceOne >  allItems.itemQuantity){
+                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity + 'шт.');
+                } else {
+                    allItems.itemQuantity = priceOne;
+                }
+            },
         }, 
         {
             itemId: 11111,
             itemName: 'Кеды "Converse"',
             itemPrice: 7999,
             itemQuantity: 10,
-            itemQuantityRequest: getRightPriceTwo,
+            getRightPriceTwo(){
+                if (priceTwo >  allItems.itemQuantity){
+                    return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity);
+                } else {
+                    allItems.itemQuantity = priceTwo;
+            }
         }  
-       
+    }
     ],
     totalPrice() {
-        retern this.allItems.reduce((price, quantity) => 
-            price += allItems.itemPrice * allItems.itemQuantity, 0);
+        return this.allItems.reduce((prices, quantity) => 
+            price += prices.itemPrice * quantity.itemQuantity, 0);
     },
 };
-
-function getRightPriceOne(priceOne){
-    if (priceOne >  allItems.itemQuantity){
-        return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity);
-    } else {
-        allItems.itemQuantity = priceOne;
-}
-
-function getRightPriceTwo(priceTwo){
-    if (priceTwo >  allItems.itemQuantity){
-        return alert('Нет на складе. Вы можете заказть ' + allItems.itemQuantity);
-    } else {
-        allItems.itemQuantity = priceTwo;
-}
-
 
 alert('Стоимость Вашей покупки: ' + totalPrice(customBasket) + 'руб.');
