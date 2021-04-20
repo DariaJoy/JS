@@ -73,7 +73,7 @@ const customBasket = {
             });
             this.allItemsDiv.insertAdjacentHTML('beforeend', `В корзине ${this.allItems.length} позиций(а) стоимостью ${this.countBasketPrice()} руб.`);
         } else {
-            this.allItemsDiv.textContent = 'Корзина пуста';
+            this.allItemsDiv.textContent = 'Ваша корзина пуста';
         }
     },
 };
