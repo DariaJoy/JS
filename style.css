@@ -1,11 +1,10 @@
-
 body {
     background-color: floralwhite;
-  
+
 
 }
 
-.marks {
+/* .marks {
     text-align: center;
 }
 
@@ -25,20 +24,58 @@ body {
 
 .cellItemBlack {
     background: black;
-}
+}*/
 
 .clearBtn {
-    cursor: pointer;
+    cursor    : pointer;
     margin-top: 30px;
     background: white;
-    
+
+}
+
+.cartList {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
 }
 
 .item {
     background-color: white;
+    margin-top      : 10px;
+    margin-bottom   : 10px;
+    border          : 1px solid black;
+    width           : 300px;
+    text-align: center;
+} 
+
+h2 {
+    font-size              : 20px;
+    text-transform         : uppercase;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size              : 14px;
+}
+
+.catalog {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+}
+.catalogProduct {
+    background-color: white;
+    margin-top      : 10px;
+    margin-bottom   : 10px;
+    border          : 1px solid black;
+    width           : 300px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.btnAddToCart {
+    cursor    : pointer;
     margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    width: 50%;
+    background: white;
 }
 
