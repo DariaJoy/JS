@@ -57,7 +57,7 @@ const catalog = {
         return `<div class="catalogProduct">
                 <h4>${item.itemName}</h4>
                 <p>${item.itemPrice} руб.</p>
-                <button class="btnAddToCart" data-itemId="${item.itemId}">Добавить в корзину</button>
+                <button class="btnAddToCart" data-item-id="${item.itemId}">Добавить в корзину</button>
                 </div>
     `},
 
@@ -110,9 +110,9 @@ const customCart = {
         if (catalogProduct) {
             const findInCart = this.allItemsInCart.find(({itemId}) => catalogProduct.itemId === itemId);
             if (findInCart) {
-                findInCart.quantity++;
+                findInCart.itemQuantity++;
             } else {
-                this.allItemsInCart.push({...catalogProduct, quantity: 1});
+                this.allItemsInCart.push({...catalogProduct, itemQuantity: 1});
             }
             this.render();
             } else {
