@@ -1,81 +1,58 @@
 body {
-    background-color: floralwhite;
+    background-color: #523600;
+    margin          : 0;
+    padding         : 0;
 
 
 }
 
-/* .marks {
+.menuButton{
+    width: 150px;
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    background: #c2c2c2;
     text-align: center;
+    cursor: pointer;
+}
+.menuButton:hover{
+    background: #f2f2f2;
+    color: #212121;
 }
 
-.chessBoard {
-    width : 400px;
-    height: 400px;
-    border: 1px solid black;
-    margin: 0 auto;
+#game{
+    border-collapse: collapse;
+    margin: 2% auto 0;
 }
-
-.cellItem {
-    width     : 50px;
-    height    : 50px;
-    float     : left;
-    background: white;
-}
-
-.cellItemBlack {
-    background: black;
-}*/
-
-.clearBtn {
-    cursor    : pointer;
-    margin-top: 30px;
-    background: white;
-
-}
-
-.cartList {
+#menu{
     display: flex;
-    align-content: space-around;
-    flex-direction: column;
+    justify-content: center;
 }
-
-.item {
-    background-color: white;
-    margin-top      : 10px;
-    margin-bottom   : 10px;
-    border          : 1px solid black;
-    width           : 300px;
+td.cell{
+    width: 20px;
+    height: 20px;
+    border: 1px dotted #eee;
+    border-collapse: collapse;
+}
+.food{
+    background: #00d021;
+}
+.snakeBody{
+    background: #e5e5e5;
+}
+.snakeHead{
+    background: #9b0013;
+}
+.disabled {
+    background: #7c7c7c;
+}
+.disabled:hover{
+    background: #7c7c7c;
+}
+#game-score {
+    margin-top: 1%;
     text-align: center;
-} 
-
-h2 {
-    font-size              : 20px;
-    text-transform         : uppercase;
-    margin-bottom: 20px;
+    font-family: "Lobster", serif;
+    font-size: 2em;
+    color: #0a0a0a;
 }
-
-h4 {
-    font-size              : 14px;
-}
-
-.catalog {
-    display: flex;
-    align-content: space-around;
-    flex-direction: row;
-}
-.catalogProduct {
-    background-color: white;
-    margin-top      : 10px;
-    margin-bottom   : 10px;
-    border          : 1px solid black;
-    width           : 300px;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.btnAddToCart {
-    cursor    : pointer;
-    margin-top: 10px;
-    background: white;
-}
-
