@@ -11,73 +11,75 @@
 </head>
 
 <body>
-    <!-- <script src="lesson1Dzhagaryan.js"></script> -->
+    <div id="game-score">Счет игры: <span id="score-count">0</span></div>
+    <div id="game-wrap">
+        <table id="game"></table>
+    </div>
+    <div id="menu">
+        <div id="playButton" class="menuButton">Старт</div>
+        <div id="newGameButton" class="menuButton">Новая игра</div>
+    </div>
+    
+    <script src="lesson7_8Dzhagaryan.js"></script>
 
-    <!-- <script src="lesson2Dzhagaryan.js"></script> -->
+    <!-- Задание 8.
 
-    <!-- <script src="lesson3Dzhagaryan.js"></script> -->
+    1) if (!("a" in window)) {
+    var a = 1;
+    }
+    alert(a);
 
-    <!-- <script src="lesson4Dzhagaryan.js"></script> -->
+    'a' будет равно indefinde, поскольку в глобальной области видимости
+    нет 'а'. Значение 'а' определено только в контексте условия if. Этот
+    код можно было бы приписать следующим образом:
 
-    <!-- <h3>Задание 1</h1>
-        <div>
-            <table class="marks">
-                <tr>
-                    <td></td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
-                    <td>D</td>
-                    <td>E</td>
-                    <td>F</td>
-                    <td>G</td>
-                    <td>H</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td colspan="8" rowspan="8">
-                        <div class="chessBoard"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                </tr>
-            </table>
+    var a;
+    if (!("a" in window)) {
+    a = 1;
+    }
+    alert(a);
 
-        </div>
+    var переходит в начало условия, но в глобальной области видимости 'а'
+    не определено и значение получает не 1, как в условии if, а indefinde.
+    В строгом режиме, скорее всего, при вызове alert возникнет ошибка,
+    что 'а' еще не инициализирована.
 
-        
+    2) var b = function a(x) {
+    x && a(--x);
+    };
+    alert(a);
 
-        <h3>Задание 2</h3>
+    Так же, как и в задании 1) 'a' будет равно indefinde,
+    поскольку в глобальной области видимости 'a' не инициализирована.
+    В самом теле функции дано невыполнимое условие.
 
-        <script src="lesson5Dzhagaryan.js"></script> -->
-        <h2>Каталог:</h2>
-        <div class="catalog"></div>
-        <hr>
-        <h2>Корзина:</h2>
-        <div class="cartList"></div>
+    3) function a(x) {
+    return x * 2;
+    }
+    var a;
+    alert(a);
 
-        <button class="clearBtn">Очистить корзину</button>
+    'a' будет иметь значение indefinde, поскольку в условии нет численного значения.
+    Если в условие 'x' подставить число, то 'a' вернет то значение, умноженное на 2,
+    которое было в условии.
 
-        <script src="lesson6Dzhagaryan.js"></script>
+    4) function b(x, y, a) {
+        arguments[2] = 10;
+        alert(a);
+    }
+    b(1, 2, 3);
+
+    'a' в теле функции присвоено значение 10, поэтому alert выдаст 10, 
+    даже если в аргумент 'b' записано другое значение.
+
+    5) function a() {
+        alert(this);
+    }
+    a.call(null);
+
+    В данном случае контекст this при вызове метода call будет объект Window. 
+    В строгом режиме alert выдаст null (подсмотрела в справочнике JS). -->
+
 
 </body>
 
